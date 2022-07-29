@@ -1,19 +1,10 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+# kazuhe.github.io
 
 ## Setup
 
-Make sure to install the dependencies:
+pnpm を利用して依存関係をインストールする
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
 pnpm install --shamefully-hoist
 ```
 
@@ -22,7 +13,7 @@ pnpm install --shamefully-hoist
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## Production
@@ -40,3 +31,14 @@ npm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+
+## ディレクトリ構成
+
+```bash
+.
+├── app.vue
+├── src
+│   ├── components # Vue コンポーネントを配置する
+│   └── pages # 内部で Vue ルーターを使用してファイルベースのルートを作成する
+└── tsconfig.json
+```
