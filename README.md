@@ -5,7 +5,7 @@
 pnpm を利用して依存関係をインストールする
 
 ```bash
-pnpm install --shamefully-hoist
+pnpm i
 ```
 
 ## Development Server
