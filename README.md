@@ -2,10 +2,10 @@
 
 ## Setup
 
-pnpm を利用して依存関係をインストールする
+npm を利用して依存関係をインストールする
 
 ```bash
-pnpm i
+npm i
 ```
 
 ## Development Server
@@ -13,7 +13,7 @@ pnpm i
 Start the development server on http://localhost:3000
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ## Production
