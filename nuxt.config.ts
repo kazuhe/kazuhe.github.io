@@ -1,6 +1,6 @@
-import { defineNuxtConfig } from "nuxt"
+import { defineNuxtConfig } from "nuxt";
 
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
-  srcDir: "src/"
-})
+  srcDir: "src/",
+});
