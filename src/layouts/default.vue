@@ -5,8 +5,61 @@
         <div>FOO</div>
         <HeaderNavigation />
       </header>
-      Some default layout shared across all pages
-      <slot />
+      <div class="flex p-4">
+        <section class="basis-9/12">
+          <slot />
+        </section>
+        <aside class="basis-3/12">
+          <Card>
+            <template #head>
+              <p>Follow me</p>
+            </template>
+            <template #body>
+              <ul>
+                <li>
+                  <NuxtLink
+                    to="https://github.com/kazuhe"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-center text-xs"
+                    ><img
+                      src="logo-gihub.png"
+                      alt="github"
+                      class="w-4 h-auto mr-1"
+                    />github.com/kazuhe</NuxtLink
+                  >
+                </li>
+                <li class="mt-2">
+                  <NuxtLink
+                    to="https://twitter.com/kazuhe__"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-center text-xs"
+                    ><img
+                      src="logo-twitter.png"
+                      alt="twitter"
+                      class="w-4 h-auto mr-1"
+                    />twitter.com/kazuhe__</NuxtLink
+                  >
+                </li>
+                <li class="mt-2">
+                  <NuxtLink
+                    to="https://zenn.dev/kazuhe"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-center text-xs"
+                    ><img
+                      src="logo-zenn.svg"
+                      alt="zenn"
+                      class="w-4 h-auto mr-1"
+                    />zenn.dev/kazuhe</NuxtLink
+                  >
+                </li>
+              </ul>
+            </template>
+          </Card>
+        </aside>
+      </div>
     </div>
   </div>
 </template>
