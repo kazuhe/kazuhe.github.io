@@ -1,14 +1,23 @@
 <script setup lang="ts">
-const foo = "foo";
+type Navigation = {
+  label: string;
+  link: string;
+};
+
+const navigations: Navigation[] = [
+  { label: "Home", link: "/" },
+  { label: "About", link: "/about" },
+];
 </script>
 
 <template>
-  <div>
-    >> HeaderNavigation
-    <ul class="flex">
-      <li>Home</li>
-      <li>About</li>
+  <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 text-zinc-50">
+    <ul class="inline-flex divide-x divide-zinc-600 border-r border-zinc-600">
+      <li v-for="(navigation, i) of navigations" :key="i">
+        <NuxtLink :to="navigation.link" class="inline-block px-3 py-2">{{
+          navigation.label
+        }}</NuxtLink>
+      </li>
     </ul>
-    foo: {{ foo }}
-  </div>
+  </nav>
 </template>
