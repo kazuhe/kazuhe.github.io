@@ -23,7 +23,7 @@
                     rel="noopener"
                     class="flex items-center text-xs"
                     ><img
-                      src="logo-gihub.png"
+                      src="/logo-gihub.png"
                       alt="github"
                       class="w-4 h-auto mr-1"
                     />github.com/kazuhe</NuxtLink
@@ -36,7 +36,7 @@
                     rel="noopener"
                     class="flex items-center text-xs"
                     ><img
-                      src="logo-twitter.png"
+                      src="/logo-twitter.png"
                       alt="twitter"
                       class="w-4 h-auto mr-1"
                     />twitter.com/kazuhe__</NuxtLink
@@ -49,7 +49,7 @@
                     rel="noopener"
                     class="flex items-center text-xs"
                     ><img
-                      src="logo-zenn.svg"
+                      src="/logo-zenn.svg"
                       alt="zenn"
                       class="w-4 h-auto mr-1"
                     />zenn.dev/kazuhe</NuxtLink
