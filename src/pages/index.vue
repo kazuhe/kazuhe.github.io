@@ -1,16 +1,35 @@
 <script setup lang="ts">
-const { data: blogs } = await useAsyncData("blogs", () =>
-  queryContent("blog").find()
-);
+import { Article } from "@/domain/article";
 
-const catsQuery = queryContent("blog");
+const zennContent = await $fetch("/api/zenn/articles");
+
+const nuxtContent: Article[] = await queryContent("blog")
+  .find()
+  .then((res) =>
+    res.map((d) => ({
+      title: d.title,
+      description: d.description,
+      path: d._path,
+      created_at: d.created_at,
+      icon: d.icon,
+      type: "blog",
+    }))
+  );
+
+const blogs = nuxtContent
+  .concat(zennContent)
+  .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
 </script>
 
 <template>
   <div>
     <ul>
-      <li v-for="blog in blogs" :key="blog._path" class="mt-3 hover:opacity-60">
-        <NuxtLink :to="blog._path">
+      <li v-for="blog in blogs" :key="blog.path" class="mt-3 hover:opacity-60">
+        <NuxtLink
+          :to="blog.path"
+          :target="blog.type === 'blog' ? '' : '_blank'"
+          rel="noopener"
+        >
           <h2 class="font-bold border-b border-zinc-500">{{ blog.title }}</h2>
           <div class="flex items-start mt-2">
             <div
