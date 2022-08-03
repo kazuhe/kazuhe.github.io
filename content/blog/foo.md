@@ -1,11 +1,9 @@
 ---
-title: 'foo page'
-description: 'foo'
+title: foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!
+description: sampleでsampleでsampleでsampleでsampleでsampleでsampleでsampleでsampleでsample
+created_at: 2022-08-03
+tags: Nuxtjs,Vuejs,TypeScript,JavaScript
+icon: 🐱
 ---
 
-# タイトル
-
-テキストテキストテキストテキストテキスト
-
-- foo
-- asdas
+foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

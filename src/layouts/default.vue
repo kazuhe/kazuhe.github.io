@@ -1,15 +1,15 @@
 <template>
-  <div class="font-mono bg-zinc-100 h-screen text-sm">
+  <div class="break-all font-mono bg-zinc-100 h-screen text-sm">
     <div class="bg-zinc-50 border-x border-zinc-200 h-screen w-[1000px] m-auto">
       <header class="w-full">
         <div>FOO</div>
         <HeaderNavigation />
       </header>
       <div class="flex p-4">
-        <section class="basis-9/12">
+        <section class="w-8/12">
           <slot />
         </section>
-        <aside class="basis-3/12">
+        <aside class="w-4/12 pl-5">
           <Card>
             <template #head>
               <p>Follow me</p>
