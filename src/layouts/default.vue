@@ -1,6 +1,6 @@
 <template>
-  <div class="break-all font-mono bg-zinc-100 h-screen text-sm">
-    <div class="bg-zinc-50 border-x border-zinc-200 h-screen w-[1000px] m-auto">
+  <div class="break-all font-mono bg-zinc-100 h-full text-sm">
+    <div class="bg-zinc-50 border-x border-zinc-200 h-full w-[1000px] m-auto">
       <header class="w-full">
         <div>FOO</div>
         <HeaderNavigation />
