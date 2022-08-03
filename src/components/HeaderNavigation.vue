@@ -7,6 +7,7 @@ type Navigation = {
 const navigations: Navigation[] = [
   { label: "Home", link: "/" },
   { label: "About", link: "/about" },
+  { label: "Blog", link: "/blog" },
 ];
 </script>
 
