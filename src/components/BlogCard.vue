@@ -26,14 +26,20 @@ withDefaults(defineProps<Props>(), {
     :to="$props.path"
     :target="$props.type === 'own' ? '' : '_blank'"
     rel="noopener"
+    class="hover:opacity-60 group"
   >
     <h2 class="font-bold border-b border-zinc-500">{{ $props.title }}</h2>
     <div class="flex items-start mt-2">
       <div
-        v-if="$props.icon"
         class="mr-2 bg-zinc-200 min-w-[5rem] h-20 flex items-center justify-center text-2xl"
       >
-        {{ $props.icon }}
+        <img
+          v-if="$props.type === 'zenn'"
+          src="/logo-zenn.svg"
+          alt="zenn"
+          class="w-5 h-auto"
+        />
+        <p v-else>{{ $props.icon }}</p>
       </div>
       <div class="w-full">
         <p v-if="$props.createdAt" class="text-xs flex items-center">
@@ -42,9 +48,7 @@ withDefaults(defineProps<Props>(), {
         </p>
         <p class="mt-1">{{ $props.description }}</p>
         <div class="flex justify-end mt-2">
-          <p class="text-blue-500 text-xs border-b inline-block float-left">
-            ...続きを読む
-          </p>
+          <text-link text="...続きを読む" />
         </div>
       </div>
     </div>

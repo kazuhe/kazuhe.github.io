@@ -2,7 +2,7 @@
   <div class="border border-zinc-00">
     <div
       v-if="$slots.head"
-      class="bg-gradient-to-b from-zinc-200 to-zinc-300 px-2 py-1"
+      class="bg-gradient-to-b from-zinc-200 to-zinc-300 font-medium text-zinc-600 px-2 py-1"
     >
       <slot name="head" />
     </div>
