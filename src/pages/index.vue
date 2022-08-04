@@ -55,7 +55,7 @@ const { data: blogs } = await useAsyncData("blogs", () =>
 <template>
   <div>
     <ul>
-      <li v-for="blog in blogs" :key="blog.path" class="mt-3 hover:opacity-60">
+      <li v-for="blog in blogs" :key="blog.path" class="first:mt-0 mt-4">
         <blog-card
           :title="blog.title"
           :description="blog.description"
