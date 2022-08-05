@@ -1,7 +1,7 @@
 <template>
   <div class="break-all bg-zinc-100 h-full min-h-screen text-sm text-zinc-800">
     <div
-      class="bg-zinc-50 border-x border-zinc-200 h-full min-h-screen w-[1000px] m-auto"
+      class="bg-zinc-50 border-x border-zinc-200 h-full min-h-screen lg:w-[1000px] m-auto"
     >
       <header class="w-full">
         <div>
@@ -19,11 +19,11 @@
         </div>
         <HeaderNavigation />
       </header>
-      <div class="flex p-4">
-        <section class="w-9/12">
+      <div class="lg:flex p-4">
+        <section class="lg:w-9/12">
           <slot />
         </section>
-        <aside class="w-3/12 pl-4">
+        <aside class="lg:w-3/12 lg:pl-4 mt-4 lg:mt-0">
           <Card>
             <template #head>
               <p>Follow me</p>
