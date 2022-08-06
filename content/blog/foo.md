@@ -2,7 +2,7 @@
 title: foooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!
 description: sampleでsampleでsampleでsampleでsampleでsampleでsampleでsampleでsampleでsample
 created_at: 2021-05-01
-tags: Nuxtjs,Vuejs,TypeScript,JavaScript
+tags: ["foo"]
 icon: 🐱
 ---
 
