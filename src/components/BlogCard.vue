@@ -22,12 +22,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <NuxtLink
-    :to="$props.path"
-    :target="$props.type === 'own' ? '' : '_blank'"
-    rel="noopener"
-    class="hover:opacity-60 group"
-  >
+  <div>
     <h2 class="font-bold border-b border-zinc-500">{{ $props.title }}</h2>
     <div class="flex items-start mt-2">
       <div
@@ -48,9 +43,13 @@ withDefaults(defineProps<Props>(), {
         </p>
         <p class="mt-1">{{ $props.description }}</p>
         <div class="flex justify-end mt-2">
-          <text-link text="...続きを読む" />
+          <text-link
+            text="...続きを読む"
+            :link="$props.path"
+            :blank="$props.type !== 'own'"
+          />
         </div>
       </div>
     </div>
-  </NuxtLink>
+  </div>
 </template>

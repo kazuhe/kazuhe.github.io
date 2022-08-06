@@ -30,47 +30,41 @@
             </template>
             <template #body>
               <ul>
-                <li>
-                  <NuxtLink
-                    to="https://github.com/kazuhe"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center"
-                    ><img
-                      src="/logo-gihub.png"
-                      alt="github"
-                      class="w-4 h-auto mr-1"
-                    />
-                    <text-link text="github.com/kazuhe" />
-                  </NuxtLink>
+                <li class="inline-flex items-center">
+                  <img
+                    src="/logo-gihub.png"
+                    alt="github"
+                    class="w-4 h-auto mr-1"
+                  />
+                  <text-link
+                    text="github.com/kazuhe"
+                    link="https://github.com/kazuhe"
+                    :blank="true"
+                  />
                 </li>
-                <li class="mt-1">
-                  <NuxtLink
-                    to="https://twitter.com/kazuhe__"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center"
-                    ><img
-                      src="/logo-twitter.png"
-                      alt="twitter"
-                      class="w-4 h-auto mr-1"
-                    />
-                    <text-link text="twitter.com/kazuhe__" />
-                  </NuxtLink>
+                <li class="inline-flex items-center mt-1">
+                  <img
+                    src="/logo-twitter.png"
+                    alt="twitter"
+                    class="w-4 h-auto mr-1"
+                  />
+                  <text-link
+                    text="twitter.com/kazuhe__"
+                    link="https://twitter.com/kazuhe__"
+                    :blank="true"
+                  />
                 </li>
-                <li class="mt-1">
-                  <NuxtLink
-                    to="https://zenn.dev/kazuhe"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center"
-                    ><img
-                      src="/logo-zenn.svg"
-                      alt="zenn"
-                      class="w-4 h-auto mr-1"
-                    />
-                    <text-link text="zenn.dev/kazuhe" />
-                  </NuxtLink>
+                <li class="inline-flex items-center mt-1">
+                  <img
+                    src="/logo-zenn.svg"
+                    alt="zenn"
+                    class="w-4 h-auto mr-1"
+                  />
+                  <text-link
+                    text="zenn.dev/kazuhe"
+                    link="https://zenn.dev/kazuhe"
+                    :blank="true"
+                  />
                 </li>
               </ul>
             </template>

@@ -8,18 +8,16 @@ import BlogCard from "@/components/BlogCard.vue";
  */
 const fetchZennContent = (): Promise<Blog[]> =>
   Promise.resolve(
-    new Parser()
-      .parseURL("https://zenn.dev/kazuhe/feed?all=1&include_scraps=1")
-      .then((res) =>
-        res.items.map((d) => ({
-          title: d.title,
-          description: d.content,
-          path: d.link,
-          createdAt: d.pubDate,
-          icon: "z",
-          type: "zenn",
-        }))
-      )
+    new Parser().parseURL("https://zenn.dev/kazuhe/feed?all=1").then((res) =>
+      res.items.map((d) => ({
+        title: d.title,
+        description: d.content,
+        path: d.link,
+        createdAt: d.pubDate,
+        icon: "z",
+        type: "zenn",
+      }))
+    )
   );
 
 /**
