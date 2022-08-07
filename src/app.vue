@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const title = "kazuhe.github.io";
 const description = "kazuhe's homepage.";
+const url = "https://kazuhe.github.io/";
 
 useHead({
   title,
@@ -19,11 +20,11 @@ useHead({
     },
     {
       property: "og:image",
-      content: "/icon.png",
+      content: `${url}icon.png`,
     },
     {
       property: "og:url",
-      content: "https://kazuhe.github.io/",
+      content: url,
     },
     {
       name: "twitter:card",
@@ -34,6 +35,7 @@ useHead({
       content: "@kazuhe__",
     },
   ],
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
 </script>
 
