@@ -4,8 +4,6 @@ const description = "kazuhe's homepage.";
 
 useHead({
   title,
-  // or, instead:
-  // titleTemplate: (title) => `kazuhe.github.io | ${title}`,
   htmlAttrs: {
     lang: "ja",
   },
