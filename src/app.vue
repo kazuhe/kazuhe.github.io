@@ -34,9 +34,6 @@ useHead({
       content: "@kazuhe__",
     },
   ],
-  bodyAttrs: {
-    class: "test",
-  },
 });
 </script>
 
