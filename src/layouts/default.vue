@@ -30,7 +30,7 @@
             </template>
             <template #body>
               <ul>
-                <li class="inline-flex items-center">
+                <li class="flex items-center">
                   <img
                     src="/logo-gihub.png"
                     alt="github"
@@ -42,7 +42,7 @@
                     :blank="true"
                   />
                 </li>
-                <li class="inline-flex items-center mt-1">
+                <li class="flex items-center mt-1">
                   <img
                     src="/logo-twitter.png"
                     alt="twitter"
@@ -54,7 +54,7 @@
                     :blank="true"
                   />
                 </li>
-                <li class="inline-flex items-center mt-1">
+                <li class="flex items-center mt-1">
                   <img
                     src="/logo-zenn.svg"
                     alt="zenn"

@@ -3,9 +3,9 @@
   "extends": [
     "config:base"
   ],
-  "dependencyDashboard": true,
-  "platformAutomerge": true,
   "timezone": "Asia/Tokyo",
+  "dependencyDashboard": true,
+  "automerge": true,
   "major": {
     "stabilityDays": 7
   },
