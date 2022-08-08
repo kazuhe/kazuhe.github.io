@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Parser from "rss-parser";
-import { Blog } from "@/domain/blog";
+import { Blog, sortBlogs } from "@/domain/blog";
 import BlogCard from "@/components/BlogCard.vue";
 
 /**
@@ -36,14 +36,6 @@ const fetchOwnContent = (): Promise<Blog[]> =>
         type: "own",
       }))
     );
-
-type Sort<T> = ([a, b]: [T[], T[]]) => T[];
-
-/**
- * Blog を最新順に並び替える
- */
-const sortBlogs: Sort<Blog> = ([a, b]) =>
-  a.concat(b).sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 
 const { data: blogs } = await useAsyncData("blogs", () =>
   Promise.all([fetchZennContent(), fetchOwnContent()]).then(sortBlogs)

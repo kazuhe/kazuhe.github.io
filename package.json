@@ -5,6 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "test": "vitest",
     "lint": "eslint . --ignore-path .gitignore --ext ts,vue",
     "format": "prettier . --write"
   },
@@ -22,6 +23,7 @@
     "prettier": "^2.7.1",
     "rss-parser": "^3.12.0",
     "sass": "^1.54.3",
+    "vitest": "^0.21.0",
     "vue-gtag-next": "^1.14.0"
   }
 }
