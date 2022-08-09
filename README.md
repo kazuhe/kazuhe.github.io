@@ -10,35 +10,24 @@ npm i
 
 ## Development Server
 
-Start the development server on http://localhost:3000
-
 ```bash
 npm run dev
 ```
 
-## Production
+## Directory structure
 
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
-
-## ディレクトリ構成
+基本は Nuxt のディレクトリ構成に沿っているが、以下コメントしているディレクトリはその限りではない
 
 ```bash
 .
-├── app.vue
-├── src
-│   ├── components # Vue コンポーネントを配置する
-│   └── pages # 内部で Vue ルーターを使用してファイルベースのルートを作成する
-└── tsconfig.json
+├── content # @nuxt/content で管理しているコンテンツ
+├── dist
+└── src
+    ├── components
+    ├── domain # ドメインオブジェクトとルール
+    ├── infrastructures # システムの外部とやりとりするロジック
+    ├── layouts
+    ├── pages
+    ├── plugins
+    └── public
 ```
