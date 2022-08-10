@@ -1,23 +1,13 @@
 <script setup lang="ts">
-const title = "kazuhe.github.io";
-const description = "kazuhe's homepage.";
 const url = "https://kazuhe.github.io/";
 
 useHead({
-  title,
+  title: "kazuhe.github.io",
   htmlAttrs: {
     lang: "ja",
   },
   meta: [
-    { name: "description", content: description },
-    {
-      property: "og:title",
-      content: title,
-    },
-    {
-      property: "og:description",
-      content: description,
-    },
+    { name: "description", content: "kazuhe's homepage." },
     {
       property: "og:image",
       content: `${url}icon.png`,
