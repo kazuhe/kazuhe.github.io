@@ -23,7 +23,7 @@
     "prettier": "2.7.1",
     "rss-parser": "3.12.0",
     "sass": "1.54.3",
-    "vitest": "0.21.0",
+    "vitest": "0.21.1",
     "vue-gtag-next": "1.14.0"
   }
 }
