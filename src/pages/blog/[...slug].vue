@@ -1,6 +1,12 @@
 <template>
   <main class="mb-4">
     <ContentDoc v-slot="{ doc }">
+      <Head>
+        <Title>{{ doc.icon }} {{ doc.title }}</Title>
+        <Meta name="description" :content="doc.description" />
+        <Meta name="og:title" :content="doc.icon + doc.title" />
+        <Meta name="og:description" :content="doc.description" />
+      </Head>
       <h1 class="text-3xl border-b pb-3 mb-3">
         {{ doc.icon }} {{ doc.title }}
       </h1>
@@ -370,25 +376,6 @@
   border-left: 0.25em solid var(--color-border-default);
 }
 
-.markdown-body ul,
-.markdown-body ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 2em;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-
 .markdown-body dd {
   margin-left: 0;
 }
@@ -663,12 +650,6 @@
   font-size: inherit;
 }
 
-.markdown-body ul.no-list,
-.markdown-body ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-
 .markdown-body ol[type="1"] {
   list-style-type: decimal;
 }
@@ -683,22 +664,6 @@
 
 .markdown-body div > ol:not([type]) {
   list-style-type: decimal;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body li > p {
-  margin-top: 16px;
-}
-
-.markdown-body li + li {
-  margin-top: 0.25em;
 }
 
 .markdown-body dl {
@@ -1008,6 +973,20 @@
       :hover {
         text-decoration: none;
       }
+    }
+  }
+
+  ul {
+    margin: 20px 0;
+    padding-left: 2em;
+    list-style: revert;
+
+    li {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 0;
     }
   }
 }
