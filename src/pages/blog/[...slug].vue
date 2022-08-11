@@ -114,7 +114,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background-image: url(/_nuxt/link.svg);
+  background-image: url(/link.svg);
   background-size: contain;
   vertical-align: middle;
   opacity: 0.5;
