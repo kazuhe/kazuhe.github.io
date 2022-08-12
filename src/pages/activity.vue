@@ -7,9 +7,9 @@ const { data: activity } = await useAsyncData("activity", () =>
 
 <template>
   <div>
-    <h2 class="font-bold border-b border-zinc-500 text-lg mb-4">
-      GitHub Pulls
-    </h2>
+    <base-heading tag="h1" class="mb-3">Activity</base-heading>
+    <p class="mb-3">私の Activity を雑にまとめる</p>
+    <base-heading tag="h2" class="mb-3">GitHub Pulls</base-heading>
     <ul>
       <li class="first:mt-0 mt-4">
         <NuxtLink
@@ -28,7 +28,7 @@ const { data: activity } = await useAsyncData("activity", () =>
           <div class="lg:w-7/12 p-2">
             <h2 class="font-bold text-lg leading-6">{{ activity.title }}</h2>
             <p class="text-xs text-zinc-500 mt-2">
-              {{ activity.body.substr(0, 150) + "..." }}
+              {{ activity.body.substring(0, 150) + "..." }}
             </p>
           </div>
         </NuxtLink>
