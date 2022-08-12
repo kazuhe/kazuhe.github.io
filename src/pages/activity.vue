@@ -1,37 +1,79 @@
 <script setup lang="ts">
-// TODO: repo と PRID を受け取って fetch して、いい感じの配列で返す関数を作る
-const { data: activity } = await useAsyncData("activity", () =>
-  $fetch("https://api.github.com/repos/zenn-dev/zenn-editor/pulls/151")
-);
+import { Pull } from "@/domain/activity";
+// import { fetchPulls } from "@/infrastructures/activity/github";
+
+const activities: Pull[] = [
+  {
+    title: "chore: Added sidebar minimize button to Zenn CLI preview",
+    description:
+      "https://github.com/zenn-dev/zenn-editor/issues/141 1画面で執筆している場合には Zenn CLI のプレビューでサイドバーを非表示にできると執筆体験が向上すると思いましたのでPRさせていただきました。なるべく既存コードを変更しない様に...",
+    url: "https://github.com/zenn-dev/zenn-editor/pull/151",
+    createdAt: "3 Jun 2021",
+    number: "151",
+    repo: "zenn-dev/zenn-editor",
+  },
+  {
+    title: "chore: Error handling of makeRequest function",
+    description:
+      'https://github.com/wantainc/microcms-js-sdk/issues/9\r\nエラーハンドリング関連でPRさせていただきます。\r\n\r\n```javascript\r\nconst client = createClient({\r\n  serviceDomain: "YOUR_DOMAIN",\r\n  apiKe...',
+    url: "https://github.com/microcmsio/microcms-js-sdk/pull/10",
+    createdAt: "27 May 2021",
+    number: "10",
+    repo: "microcmsio/microcms-js-sdk",
+  },
+];
+
+// API 実行回数に制限があった
+// const { data: activities } = await useAsyncData("activities", () =>
+//   Promise.all([
+//     fetchPulls("zenn-dev", "zenn-editor", 151),
+//     fetchPulls("microcmsio", "microcms-js-sdk", 10),
+//   ])
+// );
 </script>
 
 <template>
   <div>
-    <base-heading tag="h1" class="mb-3">Activity</base-heading>
-    <p class="mb-3">私の Activity を雑にまとめる</p>
-    <base-heading tag="h2" class="mb-3">GitHub Pulls</base-heading>
-    <ul>
-      <li class="first:mt-0 mt-4">
+    <base-heading tag="h1">Activity</base-heading>
+    <p class="mt-3">私の Activity を雑にまとめる</p>
+    <base-heading tag="h2" class="mt-4">GitHub Pulls</base-heading>
+    <ul class="mt-4">
+      <li
+        v-for="activity in activities"
+        :key="activity.createdAt"
+        class="first:mt-0 mt-4"
+      >
         <NuxtLink
-          :to="activity.html_url"
+          v-if="activity !== undefined"
+          :to="activity.url"
           target="_blank"
           rel="noopener"
-          class="block overflow-hidden lg:flex lg:items-center rounded border border-zinc-200"
+          class="block border border-zinc-200 p-4"
         >
-          <!-- OGP 画像とれない？ -->
-          <img
-            src="https://opengraph.githubassets.com/36b0755a7a4cd7069cfd64b5443a15bd179bc731e5b7d22d8f05acee1d72d41a/zenn-dev/zenn-editor/pull/151"
-            alt="zenn-dev/zenn-editor/pull/151"
-            class="lg:w-5/12"
-          />
-
-          <div class="lg:w-7/12 p-2">
-            <h2 class="font-bold text-lg leading-6">{{ activity.title }}</h2>
-            <p class="text-xs text-zinc-500 mt-2">
-              {{ activity.body.substring(0, 150) + "..." }}
-            </p>
+          <div class="flex items-center">
+            <img src="/logo-gihub.png" alt="gihub" class="w-3 h-auto mr-1" />
+            <p class="text-zinc-500 text-xs">{{ activity.repo }}</p>
+          </div>
+          <h2 class="text-lg leading-6 mt-2">
+            <span class="text-zinc-500 mr-2">#{{ activity.number }}</span>
+            <span class="font-bold">{{ activity.title }}</span>
+          </h2>
+          <p class="text-xs text-zinc-500 mt-2">
+            {{ activity.description }}
+          </p>
+          <div class="flex items-center mt-2">
+            <img
+              src="/icon.png"
+              alt="kazuhe"
+              class="rounded-full border border-zinc-200 w-4 h-auto mr-1"
+            />
+            <div class="text-xs leading-none">
+              <span class="font-bold mr-1">kazuhe</span>
+              <span class="text-zinc-500">{{ activity.createdAt }}</span>
+            </div>
           </div>
         </NuxtLink>
+        <p v-else>...コンテンツを取得できませんでした</p>
       </li>
     </ul>
   </div>
