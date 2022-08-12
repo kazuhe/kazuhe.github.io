@@ -41,7 +41,7 @@ withDefaults(defineProps<Props>(), {
           <img src="/calendar.svg" alt="calendar" class="w-3" />
           <span class="ml-1">{{ $props.createdAt }}</span>
         </p>
-        <p class="mt-1">{{ $props.description }}</p>
+        <p class="mt-1">{{ $props.description.substring(0, 100) + "..." }}</p>
         <div class="flex justify-end mt-2">
           <text-link
             text="...続きを読む"

@@ -1,5 +1,5 @@
 <template>
-  <main class="mb-4">
+  <div class="mb-4">
     <ContentDoc v-slot="{ doc }">
       <Head>
         <Title>{{ doc.icon }} {{ doc.title }}</Title>
@@ -7,9 +7,9 @@
         <Meta name="og:title" :content="doc.icon + doc.title" />
         <Meta name="og:description" :content="doc.description" />
       </Head>
-      <h1 class="text-3xl border-b pb-3 mb-3">
-        {{ doc.icon }} {{ doc.title }}
-      </h1>
+      <base-heading tag="h1" class="mb-3"
+        >{{ doc.icon }} {{ doc.title }}</base-heading
+      >
       <div class="border-b-2 text-zinc-600 text-xs pb-4 mb-4">
         <p class="mb-2">
           <span class="font-bold">Created at</span>
@@ -27,7 +27,7 @@
       </div>
       <ContentRenderer class="markdown-body" :value="doc" />
     </ContentDoc>
-  </main>
+  </div>
 </template>
 
 <style lang="scss">
@@ -68,7 +68,7 @@
   --color-fg-default: #27272a;
   --color-fg-muted: #57606a;
   --color-fg-subtle: #6e7781;
-  --color-canvas-subtle: #f6f8fa;
+  --color-canvas-subtle: #e4e4e7;
   --color-border-default: #d0d7de;
   --color-border-muted: hsla(210, 18%, 87%, 1);
   --color-neutral-muted: rgba(175, 184, 193, 0.2);
@@ -76,16 +76,6 @@
   --color-accent-emphasis: #4338ca;
   --color-attention-subtle: #fff8c5;
   --color-danger-fg: #cf222e;
-}
-
-.markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  margin: 0;
-  color: var(--color-fg-default);
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
 }
 
 .markdown-body .octicon {

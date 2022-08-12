@@ -20,9 +20,9 @@
         <HeaderNavigation />
       </header>
       <div class="lg:flex p-4">
-        <section class="lg:w-9/12">
+        <main class="lg:w-9/12">
           <slot />
-        </section>
+        </main>
         <aside class="lg:w-3/12 lg:pl-4 mt-4 lg:mt-0">
           <Card>
             <template #head>
