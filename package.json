@@ -1,9 +1,11 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "generate:github-pulls": "node scripts/github-pulls",
     "preview": "nuxt preview",
     "test": "vitest",
     "lint": "eslint . --ignore-path .gitignore --ext ts,vue",

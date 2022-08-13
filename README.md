@@ -14,6 +14,20 @@ npm i
 npm run dev
 ```
 
+## Generate
+
+Nuxt プロジェクト全体を生成する
+
+```bash
+npm run generate
+```
+
+GitHub API を実行してレスポンスを `json/github-pulls.json` ファイルに生成する
+
+```bash
+npm run generate:github-pulls
+```
+
 ## Directory structure
 
 基本は Nuxt のディレクトリ構成に沿っているが、以下コメントしているディレクトリはその限りではない
@@ -22,6 +36,8 @@ npm run dev
 .
 ├── content # @nuxt/content で管理しているコンテンツ
 ├── dist
+├── json # ローカルで実行した API のレスポンス
+├── scripts # ローカルで実行されるスクリプト
 └── src
     ├── components
     ├── domain # ドメインオブジェクトとルール

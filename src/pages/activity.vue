@@ -1,35 +1,10 @@
 <script setup lang="ts">
-import { Pull } from "@/domain/activity";
-// import { fetchPulls } from "@/infrastructures/activity/github";
+import path from "path";
+import { fetchPulls } from "@/infrastructures/activity/github";
 
-const activities: Pull[] = [
-  {
-    title: "chore: Added sidebar minimize button to Zenn CLI preview",
-    description:
-      "https://github.com/zenn-dev/zenn-editor/issues/141 1画面で執筆している場合には Zenn CLI のプレビューでサイドバーを非表示にできると執筆体験が向上すると思いましたのでPRさせていただきました。なるべく既存コードを変更しない様に...",
-    url: "https://github.com/zenn-dev/zenn-editor/pull/151",
-    createdAt: "3 Jun 2021",
-    number: "151",
-    repo: "zenn-dev/zenn-editor",
-  },
-  {
-    title: "chore: Error handling of makeRequest function",
-    description:
-      'https://github.com/wantainc/microcms-js-sdk/issues/9\r\nエラーハンドリング関連でPRさせていただきます。\r\n\r\n```javascript\r\nconst client = createClient({\r\n  serviceDomain: "YOUR_DOMAIN",\r\n  apiKe...',
-    url: "https://github.com/microcmsio/microcms-js-sdk/pull/10",
-    createdAt: "27 May 2021",
-    number: "10",
-    repo: "microcmsio/microcms-js-sdk",
-  },
-];
-
-// API 実行回数に制限があった
-// const { data: activities } = await useAsyncData("activities", () =>
-//   Promise.all([
-//     fetchPulls("zenn-dev", "zenn-editor", 151),
-//     fetchPulls("microcmsio", "microcms-js-sdk", 10),
-//   ])
-// );
+const { data: activities } = await useAsyncData("activities", () =>
+  fetchPulls(path.resolve("json", "github-pulls.json"))
+);
 </script>
 
 <template>
