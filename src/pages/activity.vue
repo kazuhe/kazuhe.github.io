@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import path from "path";
 import { fetchPulls } from "@/infrastructures/activity/github";
 
 const { data: activities } = await useAsyncData("activities", () =>
-  fetchPulls()
+  fetchPulls(path.resolve("json", "github-pulls.json"))
 );
 </script>
 

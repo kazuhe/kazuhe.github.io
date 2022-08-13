@@ -1,0 +1,26 @@
+[
+  {
+    "html_url": "https://github.com/foo/bar/pull/1",
+    "number": 1,
+    "title": "GitHub Pulls API test",
+    "body": "012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789!ABCDEF..",
+    "created_at": "created_at",
+    "base": {
+      "repo": {
+        "full_name": "foo/bar"
+      }
+    }
+  },
+  {
+    "html_url": "https://github.com/hoge/fuga/pull/2",
+    "number": 2,
+    "title": "GitHub Pulls API test",
+    "body": "012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789!ABCDEF..",
+    "created_at": "created_at",
+    "base": {
+      "repo": {
+        "full_name": "hoge/fuga"
+      }
+    }
+  }
+]

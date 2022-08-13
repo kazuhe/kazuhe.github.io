@@ -1,14 +1,13 @@
 import fs from "fs";
-import path from "path";
 import { Pull } from "@/domain/activity";
 
 /**
  * GitHub の Pull Request を取得する
  */
-export const fetchPulls = async (): Promise<Pull[] | undefined> =>
+export const fetchPulls = async (path: string): Promise<Pull[] | undefined> =>
   fs.promises
-    .readFile(path.resolve("json", "github-pulls.json"), "utf-8")
-    .then((reponse) => JSON.parse(reponse))
+    .readFile(path, "utf-8")
+    .then(JSON.parse)
     .then((data) =>
       data.map((data) => ({
         title: data.title,
