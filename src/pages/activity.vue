@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * json/github-pulls.json
+ * from json/github-pulls.json
  */
 const activities = [
   {
@@ -36,7 +36,6 @@ const activities = [
         class="first:mt-0 mt-4"
       >
         <NuxtLink
-          v-if="activity !== undefined"
           :to="activity.url"
           target="_blank"
           rel="noopener"
@@ -65,7 +64,6 @@ const activities = [
             </div>
           </div>
         </NuxtLink>
-        <p v-else>...コンテンツを取得できませんでした</p>
       </li>
     </ul>
   </div>
