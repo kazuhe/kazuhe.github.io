@@ -1,10 +1,27 @@
 <script setup lang="ts">
-import path from "path";
-import { fetchPulls } from "@/infrastructures/activity/github";
-
-const { data: activities } = await useAsyncData("activities", () =>
-  fetchPulls(path.resolve("json", "github-pulls.json"))
-);
+/**
+ * json/github-pulls.json
+ */
+const activities = [
+  {
+    title: "chore: Added sidebar minimize button to Zenn CLI preview",
+    description:
+      "https://github.com/zenn-dev/zenn-editor/issues/141\r\n\r\n1画面で執筆している場合には Zenn CLI のプレビューでサイドバーを非表示にできると執筆体験が向上すると思いましたのでPRさせていただきました。\r\n\r\nなるべく既存コードを変更しない様に...",
+    url: "https://github.com/zenn-dev/zenn-editor/pull/151",
+    createdAt: "2021-05-31T08:22:33Z",
+    number: 151,
+    repo: "zenn-dev/zenn-editor",
+  },
+  {
+    title: "chore: Error handling of makeRequest function",
+    description:
+      'https://github.com/wantainc/microcms-js-sdk/issues/9\r\nエラーハンドリング関連でPRさせていただきます。\r\n\r\n```javascript\r\nconst client = createClient({\r\n  serviceDomain: "YOUR...',
+    url: "https://github.com/microcmsio/microcms-js-sdk/pull/10",
+    createdAt: "2021-05-26T08:50:05Z",
+    number: 10,
+    repo: "microcmsio/microcms-js-sdk",
+  },
+];
 </script>
 
 <template>
