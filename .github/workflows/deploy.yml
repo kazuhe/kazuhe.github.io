@@ -26,7 +26,7 @@ jobs:
           node-version: "16"
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v2
       - name: Install dependencies
         run: npm i
       - name: Static HTML export with Nuxt
