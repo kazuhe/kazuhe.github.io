@@ -24,7 +24,7 @@
     "nuxt": "3.0.0-rc.8",
     "prettier": "2.7.1",
     "rss-parser": "3.12.0",
-    "sass": "1.54.5",
+    "sass": "1.54.8",
     "vitest": "0.22.1",
     "vue-gtag-next": "1.14.0"
   }
