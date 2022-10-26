@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "2.2.0",
-    "@nuxtjs/tailwindcss": "6.1.0",
+    "@nuxtjs/tailwindcss": "6.1.1",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
     "@vue/eslint-config-typescript": "11.0.2",
