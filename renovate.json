@@ -5,7 +5,7 @@
   ],
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": true,
-  "automerge": true,
+  "automerge": false,
   "major": {
     "stabilityDays": 7
   },
