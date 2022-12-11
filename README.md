@@ -2,16 +2,16 @@
 
 ## Setup
 
-npm を利用して依存関係をインストールする
+pnpm を利用して依存関係をインストールする
 
 ```bash
-npm i
+pnpm i
 ```
 
 ## Development Server
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## Generate
@@ -19,13 +19,13 @@ npm run dev
 Nuxt プロジェクト全体を生成する
 
 ```bash
-npm run generate
+pnpm run generate
 ```
 
 GitHub API を実行してレスポンスを `json/github-pulls.json` ファイルに生成する
 
 ```bash
-npm run generate:github-pulls
+pnpm run generate:github-pulls
 ```
 
 ## Directory structure
