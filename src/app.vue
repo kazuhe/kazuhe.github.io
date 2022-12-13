@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 const url = "https://kazuhe.github.io/";
 
 useHead({
@@ -27,7 +27,7 @@ useHead({
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
-</script>
+</script> -->
 
 <template>
   <NuxtLayout>

@@ -1,9 +1,13 @@
 import path from "path";
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   srcDir: "src/",
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "nuxt-icon"],
+  typescript: {
+    strict: true,
+  },
+  css: ["@/assets/css/github-markdown-dark.min.css"],
 
   /**
    * @nuxt/content
