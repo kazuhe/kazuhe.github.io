@@ -1,27 +1,36 @@
 <script setup lang="ts">
 useHead({
   bodyAttrs: {
-    style: "height: 100vh; overflow: hidden;",
+    class: "bg-zinc-900",
   },
 });
+
+const isShownNavigation = ref(false);
+
+const hideNavigation = () => {
+  isShownNavigation.value = false;
+};
+
+const showNavigation = () => {
+  isShownNavigation.value = true;
+};
 </script>
 
 <template>
-  <div class="break-all bg-zinc-900 h-full min-h-screen text-sm text-zinc-200">
+  <div class="break-all h-full min-h-screen text-sm text-zinc-200">
     <div class="">
-      <aside
-        class="fixed top-0 left-0 bottom-0 w-60 overflow-x-hidden overflow-y-auto border-r border-zinc-700"
-      >
-        <XNavigation />
-      </aside>
-      <div class="pl-60">
-        <XHeader />
+      <XNavigation
+        :is-shown="isShownNavigation"
+        @hide-navigation="hideNavigation"
+      />
+      <main class="">
+        <XHeader @show-navigation="showNavigation" />
         <div
           class="h-screen overflow-x-scroll mx-auto sm:px-6 lg:px-8 px-4 max-w-7xl"
         >
-          <main class="m-auto">
+          <div class="m-auto py-6">
             <slot />
-          </main>
+          </div>
           <!-- <aside class="lg:w-3/12 lg:pl-4 mt-4 lg:mt-0">
                 <Card>
                   <template #head>
@@ -73,7 +82,7 @@ useHead({
             <global-footer />
           </div>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 </template>

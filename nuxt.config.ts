@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  css: ["@/assets/css/github-markdown-dark.min.css"],
 
   /**
    * @nuxt/content
