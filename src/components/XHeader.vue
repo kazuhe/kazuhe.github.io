@@ -6,9 +6,9 @@ const emits = defineEmits<{
 
 <template>
   <header
-    class="h-12 border-b border-zinc-700 px-3 flex justify-between items-center"
+    class="fixed w-full md:-ml-60 md:pl-60 h-12 bg-zinc-900 border-b border-zinc-700 px-3 flex justify-between items-center md:justify-end"
   >
-    <div @click="emits('showNavigation')">
+    <div class="md:hidden" @click="emits('showNavigation')">
       <Icon name="grommet-icons:menu" size="24" />
     </div>
     <ul class="flex items-center">

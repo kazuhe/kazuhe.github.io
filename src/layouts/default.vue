@@ -23,12 +23,10 @@ const showNavigation = () => {
         :is-shown="isShownNavigation"
         @hide-navigation="hideNavigation"
       />
-      <main class="">
+      <main class="md:ml-60">
         <XHeader @show-navigation="showNavigation" />
-        <div
-          class="h-screen overflow-x-scroll mx-auto sm:px-6 lg:px-8 px-4 max-w-7xl"
-        >
-          <div class="m-auto py-6">
+        <div class="pt-12 h-screen mx-auto px-6 md:px-20 max-w-7xl">
+          <div class="overflow-x-scroll m-auto py-6">
             <slot />
           </div>
           <!-- <aside class="lg:w-3/12 lg:pl-4 mt-4 lg:mt-0">

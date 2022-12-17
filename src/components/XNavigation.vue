@@ -25,13 +25,15 @@ const navigations: Navigation[] = [
   <div
     @click="emits('hideNavigation')"
     v-show="props.isShown"
-    class="fixed bg-zinc-900/[.8] inset-0 w-screen h-screen"
+    class="fixed bg-zinc-900/[.8] inset-0 w-screen h-screen md:hidden"
   />
   <aside
-    class="fixed h-full top-0 bg-zinc-800 right-full bottom-0 w-60 overflow-x-hidden overflow-y-auto"
+    class="z-50 fixed h-full top-0 bg-zinc-800 right-full bottom-0 w-60 overflow-x-hidden overflow-y-auto md:translate-x-60"
     :class="props.isShown ? 'translate-x-60' : 'translate-x-0'"
   >
-    <div class="flex items-center h-12 p-3 border-b border-zinc-700">
+    <div
+      class="flex items-center h-12 p-3 border-b border-zinc-700 md:border-none"
+    >
       <img
         src="/icon.png"
         alt="kazuhe"
