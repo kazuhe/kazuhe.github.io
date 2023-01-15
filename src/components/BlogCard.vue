@@ -38,7 +38,7 @@ withDefaults(defineProps<Props>(), {
       </div>
       <div class="w-full">
         <p v-if="$props.createdAt" class="text-xs flex items-center">
-          <img src="/calendar.svg" alt="calendar" class="w-3" />
+          <Icon name="grommet-icons:calendar" size="12" />
           <span class="ml-1">{{ $props.createdAt }}</span>
         </p>
         <p class="mt-1">{{ $props.description.substring(0, 100) + "..." }}</p>

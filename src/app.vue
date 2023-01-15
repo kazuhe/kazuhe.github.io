@@ -1,36 +1,23 @@
 <script setup lang="ts">
-const url = "https://kazuhe.github.io/";
-
-useHead({
-  title: "kazuhe.github.io",
-  htmlAttrs: {
-    lang: "ja",
-  },
-  meta: [
-    { name: "description", content: "kazuhe's homepage." },
-    {
-      property: "og:image",
-      content: `${url}icon.png`,
-    },
-    {
-      property: "og:url",
-      content: url,
-    },
-    {
-      name: "twitter:card",
-      content: "summary",
-    },
-    {
-      name: "twitter:site",
-      content: "@kazuhe__",
-    },
-  ],
-  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-});
+import blogs from "../json/feed-zenn.json";
+import XCard from "./components/XCard.vue";
+import XHeader from "./components/XHeader.vue";
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <x-header class="h-12" />
+  <main class="mt-12 p-6">
+    <ul class="space-y-6">
+      <li v-for="blog in blogs" :key="blog.path" class="">
+        <x-card
+          :title="blog.title"
+          :description="blog.description"
+          :path="blog.path"
+          :created-at="blog.createdAt"
+          :icon="blog.icon"
+          :type="blog.type"
+        />
+      </li>
+    </ul>
+  </main>
 </template>
