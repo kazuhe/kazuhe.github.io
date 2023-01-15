@@ -23,3 +23,8 @@ type SortBlogs = ([a, b]: [Blog[], Blog[]]) => Blog[];
 
 export const sortBlogs: SortBlogs = ([a, b]) =>
   a.concat(b).sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+
+/**
+ * Zenn の記事かどうか
+ */
+export const isZennContent = (type: string): boolean => type === "zenn";
