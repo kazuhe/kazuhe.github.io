@@ -47,3 +47,16 @@ npm run generate:github-pulls
     ├── plugins
     └── public
 ```
+
+## TODO
+
+- [ ] GitHub Actions
+  - [ ] Check
+  - [ ] deploy
+- [ ] Blog を取得
+  - [ ] RSS からコンテンツを取得する
+    - [ ] Zenn
+    - [ ] はてな
+  - [ ] 最新順に並び替える
+- [ ] Gtag
+  - [ ] ID `G-GFL5N1DYX9`
