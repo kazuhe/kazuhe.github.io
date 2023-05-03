@@ -24,7 +24,6 @@ const createTag = (text: string): HTMLSpanElement => {
     "bg-zinc-700",
     "text-zinc-300",
     "text-xs",
-    "font-bold",
     "px-2",
     "py-0.5",
     "ml-2",
@@ -55,11 +54,17 @@ const createTimelineItem = (timelineItem: TimelineItem): HTMLLIElement => {
     "text-sm",
     "inline-block",
     "hover:text-zinc-400",
-    "hover:border-b"
+    "hover:border-b",
+    "hover:border-zinc-400"
   );
   a.href = timelineItem.link;
   a.textContent = timelineItem.title;
   a.setAttribute("target", "_blank");
+
+  const span = document.createElement("span");
+  span.classList.add("icon-[mdi--open-in-new]", "text-zinc-400", "ml-1");
+  a.appendChild(span);
+
   li.appendChild(a);
 
   return li;
@@ -77,6 +82,17 @@ export const createTimeline = (timeline: Timeline): HTMLUListElement => {
   });
   return ul;
 };
+
+/**
+ * タイムラインを最新順に並び替える
+ */
+type SortTimeline = ([a, b]: [
+  TimelineItem[],
+  TimelineItem[]
+]) => TimelineItem[];
+
+export const sortTimeline: SortTimeline = ([a, b]) =>
+  a.concat(b).sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 
 /**
  * json ファイルを引数として受け取って、タイムライン の配列に変換する
