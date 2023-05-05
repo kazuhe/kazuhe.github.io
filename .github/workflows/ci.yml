@@ -6,17 +6,20 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: ".node-version"
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          cache: "pnpm"
       - name: Install dependencies
-        run: npm ci
-      - name: Static HTML export with Nuxt
-        run: npm run generate
+        run: pnpm install
       - name: Unit test
-        run: npm run test
+        run: pnpm run test
+      - name: Build
+        run: pnpm run build
