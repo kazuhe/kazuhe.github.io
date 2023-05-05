@@ -3,7 +3,7 @@ import { dateFormat } from "./date";
 /**
  * タイムラインのアイテム
  */
-type TimelineItem = {
+export type TimelineItem = {
   date: string;
   title: string;
   link: string;
