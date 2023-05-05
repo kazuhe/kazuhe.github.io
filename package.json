@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "build:article": "node --loader ts-node/esm src/node/createArticleFile.ts",
+    "build": "node --loader ts-node/esm src/node/createArticleFile.ts && tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
