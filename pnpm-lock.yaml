@@ -9,8 +9,8 @@ devDependencies:
     specifier: 1.1.50
     version: 1.1.50
   '@iconify/tailwind':
-    specifier: 0.1.2
-    version: 0.1.2
+    specifier: 0.1.4
+    version: 0.1.4
   '@types/node':
     specifier: 18.15.11
     version: 18.15.11
@@ -339,8 +339,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify/tailwind@0.1.2:
-    resolution: {integrity: sha512-pK9mT1v20x+37p7OhfoRxaMn19zdDBlnb/wSkdD2NIyByv3fLJqr3B1Id9CzxIzUVSVzSb6nXxuEP9BS/fKETA==}
+  /@iconify/tailwind@0.1.4:
+    resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
