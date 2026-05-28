@@ -24,8 +24,8 @@ devDependencies:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.21)
   date-fns:
-    specifier: 2.29.3
-    version: 2.29.3
+    specifier: 2.30.0
+    version: 2.30.0
   eslint:
     specifier: 8.38.0
     version: 8.38.0
@@ -70,6 +70,11 @@ devDependencies:
     version: 0.1.0
 
 packages:
+
+  /@babel/runtime@7.29.7:
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
+    engines: {node: '>=6.9.0'}
+    dev: true
 
   /@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -974,9 +979,11 @@ packages:
     hasBin: true
     dev: true
 
-  /date-fns@2.29.3:
-    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+  /date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.29.7
     dev: true
 
   /date-time@3.1.0:
